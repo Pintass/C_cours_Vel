@@ -1,0 +1,20 @@
+int main(void) {
+    int age;
+    int poids;
+    float taille;
+    float calcul;
+
+    printf("Quel est votre poids (en KG) ?");
+    scanf("%d", poids);
+    printf("Quel est votre taille (en mètre) ?");
+    scanf("%f", taille);
+    printf("Quel est votre âge ?");
+    scanf("%d", age);
+    calcul = poids/(taille*taille);
+
+    if ((age>=17 && age<=48 && calcul > 23) || (age<= 16 && calcul >27.3) || (age >= 49 && calcul > 21.5)) {
+        printf("Surpoids atteint");
+    } else {
+        printf("Surpoids non atteint");
+    }
+}

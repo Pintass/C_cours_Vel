@@ -1,0 +1,21 @@
+int main(void) {
+    int nombre;
+    char choix;
+
+    while(choix != 0) {
+        printf("Entrez un nombre");
+        scanf("%d", &nombre);
+        if (nombre %2 == 0) {
+            printf("Nombre pair !");
+        } else {
+            printf("Nombre non-pair");
+        }
+        printf("Si vous souhitez continuer, tapez _O_, dans le cas contraire, tapez _N_");
+        scanf("%c", &choix);
+        if (choix == "n") {
+            choix = 0;
+        }
+    }
+    return 0;
+    
+}
