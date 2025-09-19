@@ -20,7 +20,6 @@ int main(void) {
     
     if (discriminant == 0) {
     	printf("Il y a une solution puisque le discriminant = 0\n x=%f", discriminant);
-    	//DONNER LES VALEURS 
     } else if(discriminant < 0) {
     	printf("Aucune solution n'est disponible car le discriminant est négatif.\n");
     } else {
@@ -28,3 +27,4 @@ int main(void) {
     	
     }
 }
+
