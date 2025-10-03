@@ -20,4 +20,7 @@ int main(void) {
     	for(int i=1; i<=choix; i++){
     		printf("\n valeur: %d, position: %d\n",tab[i], i);
     	}
+
+
+	return 0;+
 }
