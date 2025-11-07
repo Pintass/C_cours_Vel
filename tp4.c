@@ -2,7 +2,7 @@
 void swap(float* a, float* b);
 float saisir_reel_v1();
 void saisir_reel_v2(float* adresseA); 
-float saisir_2_flottants_v1();
+void saisir_2_flottants_v1(float* f1, float* f2);
 void saisir_2_flottants_v2(float* adrA, float* adrB);
 void copy_2_reels(float a, float b, float* chemin1, float* chemin2);
 
@@ -23,7 +23,7 @@ int main(void) {
 	
 	
 	// saisir_reel_v2(&v2_1);
-	// saisir_2_flottants_v1();
+	// saisir_2_flottants_v1(&v2_1, &v2_2);
 	// saisir_2_flottants_v2(&v2_1, &v2_2);
 	copy_2_reels(a, b, &chemin1, &chemin2);
 	
@@ -44,24 +44,26 @@ void saisir_reel_v2(float* adresseA) {
 	printf("Saisissez un réel : \n");
 	scanf(" %f", adresseA); 
 	printf("saisir reel 2 %f \n", *adresseA);
+	return;
 }
 
-float saisir_2_flottants_v1() {
-	float c = saisir_reel_v1();
-	float c2 = saisir_reel_v1();
-	printf("saisir 2 floats 1  %f , %f \n", c, c2);
-	return c, c2;
+void saisir_2_flottants_v1(float* f1, float* f2) {
+	*f1 = saisir_reel_v1();
+	*f2 = saisir_reel_v1();
+	return;
 }
 
 void saisir_2_flottants_v2(float* adrA, float* adrB) {
 	saisir_reel_v2(adrA);
 	saisir_reel_v2(adrB);
+	return;
 }
 
 void copy_2_reels(float a, float b, float* chemin1, float* chemin2) {
 	*chemin1 = a;
 	*chemin2 = b;
 	printf("copy 2 reels");
+	return;
 }
 
 
@@ -71,4 +73,3 @@ void swap(float* a, float* b) {
 	*a = ptemp;
 	return;
 }
-
